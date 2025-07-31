@@ -1,0 +1,19 @@
+services:
+  ip-monitor:
+    build: .
+    container_name: ip-monitor
+    env_file: .env
+    ports:
+      - "8000:8000"
+    volumes:
+      - ip-monitor-data:/app/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "python healthcheck.py"]
+      interval: 30s
+      timeout: 5s
+      start_period: 10s
+      retries: 3
+
+volumes:
+  ip-monitor-data:

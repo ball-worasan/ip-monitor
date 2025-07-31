@@ -1,0 +1,53 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# Packaging / build
+*.egg-info/
+*.egg
+build/
+dist/
+*.spec
+
+# dotenv / secrets
+.env
+.env.*          # any variant overrides
+
+# Runtime data & logs (don't commit history/logs)
+data/
+*.log
+*.sqlite3
+
+# Test / coverage
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# IDE / editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Backup archives
+backups/
+*.tgz
+*.zip
+
+# Docker local overrides (if you create them)
+docker-compose.override.yml
+docker-compose.local.yml
+
+# Misc
+__pypackages__/
